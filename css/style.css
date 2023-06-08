@@ -496,6 +496,10 @@ footer .credit a {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.modal.show {
+  display: flex;
+}
+
 .modal .modal-container {
   position: relative;
   background-color: #fefefe;

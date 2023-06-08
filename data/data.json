@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "product_name": "Kopi 1",
+      "price": 30000,
+      "picture": "img/products/product.jpg",
+      "stars": 5,
+      "offer": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,voluptatum blanditiis hic aut culpa nisi illum quo ab iusto, nostrum vel veritatis asperiores incidunt adipisci, dolores similique sint. Dignissimos, beatae."
+    },
+    {
+      "id": 2,
+      "product_name": "Kopi 2",
+      "price": 33000,
+      "picture": "img/products/product.jpg",
+      "stars": 2,
+      "offer": 30000,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,voluptatum blanditiis hic aut culpa nisi illum quo ab iusto, nostrum vel veritatis asperiores incidunt adipisci, dolores similique sint. Dignissimos, beatae."
+    },
+    {
+      "id": 3,
+      "product_name": "Kopi 3",
+      "price": 28000,
+      "picture": "img/products/product.jpg",
+      "stars": 4,
+      "offer": 24500,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,voluptatum blanditiis hic aut culpa nisi illum quo ab iusto, nostrum vel veritatis asperiores incidunt adipisci, dolores similique sint. Dignissimos, beatae."
+    },
+    {
+      "id": 4,
+      "product_name": "Kopi 4",
+      "price": 40000,
+      "picture": "img/products/product.jpg",
+      "stars": 1,
+      "offer": 37500,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,voluptatum blanditiis hic aut culpa nisi illum quo ab iusto, nostrum vel veritatis asperiores incidunt adipisci, dolores similique sint. Dignissimos, beatae."
+    },
+    {
+      "id": 5,
+      "product_name": "Kopi 5",
+      "price": 35000,
+      "picture": "img/products/product.jpg",
+      "stars": 3,
+      "offer": 32500,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,voluptatum blanditiis hic aut culpa nisi illum quo ab iusto, nostrum vel veritatis asperiores incidunt adipisci, dolores similique sint. Dignissimos, beatae."
+    }
+  ]
+}
