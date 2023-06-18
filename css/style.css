@@ -165,6 +165,22 @@ body {
   font-size: 1.2rem;
 }
 
+.navbar .shopping-cart .cart-item .item-amount {
+  display: flex;
+  margin: 1rem 0;
+  padding: 1rem;
+}
+
+.navbar .shopping-cart .cart-item .item-amount a {
+  color: #666;
+}
+
+.navbar .shopping-cart .cart-item .item-amount input {
+  width: 3rem;
+  text-align: center;
+  margin: 0 0.5rem;
+}
+
 .navbar .shopping-cart .cart-item .remove-item {
   position: absolute;
   right: 1rem;
@@ -174,6 +190,7 @@ body {
 .navbar .shopping-cart .cart-item .remove-item:hover {
   color: var(--primary);
 }
+
 /* hero section */
 .hero {
   min-height: 100vh;
@@ -327,7 +344,7 @@ body {
 /* Products section */
 .products .row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   gap: 1.5rem;
   margin-top: 4rem;
 }
@@ -365,7 +382,7 @@ body {
   padding: 1rem 0;
 }
 
-.products .row .product-card .product-card-image img {
+.products .row .product-card .product-image img {
   height: 25rem;
 }
 
@@ -373,25 +390,33 @@ body {
   font-size: 2rem;
 }
 
-.products .row .product-card .product-content .product-stars {
+.products .row .product-card .product-content .product-stars,
+.modal .product-stars {
   font-size: 1.7rem;
   padding: 0.8rem;
   color: var(--primary);
 }
 
-.products .row .product-card .product-content .product-stars .star-full {
+.products .row .product-card .product-content .product-stars .star-full,
+.modal .product-stars .star-full {
   fill: var(--primary);
 }
 
-.products .row .product-card .product-content .product-price {
+.products .row .product-card .product-content .product-price,
+.modal .product-price {
   font-size: 1.3rem;
   font-weight: bold;
 }
 
-.products .row .product-card .product-content .product-price span {
+.products .row .product-card .product-content .product-price span,
+.modal .product-price span {
   text-decoration: line-through;
   font-weight: lighter;
   font-size: 1rem;
+}
+
+.product-content p {
+  text-align: justify;
 }
 
 /* Contact section */

@@ -1,10 +1,12 @@
 // toggle class active hamburger menu
 const hm = document.querySelector("#hamburger-menu");
 const navbarNav = document.querySelector(".navbar-nav");
+
 // ketika hamburger menu di klik
 hm.onclick = function () {
   navbarNav.classList.toggle("active");
 };
+
 // toggle search form
 const sb = document.querySelector("#search-button");
 const searchForm = document.querySelector(".search-form");
@@ -14,6 +16,7 @@ sb.onclick = (e) => {
   searchForm.classList.toggle("active");
   searchBox.focus();
 };
+
 // toggle shopping cart
 const cb = document.querySelector("#cart");
 const shopCart = document.querySelector(".shopping-cart");
@@ -22,15 +25,16 @@ cb.onclick = (e) => {
   e.preventDefault();
   shopCart.classList.toggle("active");
 };
+
 // klik di luar element
 document.addEventListener("click", function (e) {
   if (!hm.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove("active");
   }
-  if (!sb.contains(e.target) && !navbarNav.contains(e.target)) {
+  if (!sb.contains(e.target) && !searchForm.contains(e.target)) {
     searchForm.classList.remove("active");
   }
-  if (!cb.contains(e.target) && !navbarNav.contains(e.target)) {
+  if (!cb.contains(e.target) && !shopCart.contains(e.target)) {
     shopCart.classList.remove("active");
   }
 });
@@ -64,49 +68,58 @@ $(document).ready(() => {
       ).html(productItems[i]["product_name"]);
 
       // tampilkan harga produk
-      $(`#products .product-card:nth-child(${indexChild}) .product-price`).html(
-        productItems[i]["offer"] != "0"
-          ? `${rupiahFormat(productItems[i]["offer"])} <span> ${rupiahFormat(
-              productItems[i]["price"]
-            )}</span>`
-          : `${rupiahFormat(productItems[i]["price"])}`
+      showPriceItem(
+        `#products .product-card:nth-child(${indexChild}) .product-price`,
+        productItems[i]["price"],
+        productItems[i]["offer"]
       );
 
       // tampilkan bintang
-      const starCount = productItems[i]["stars"];
-
-      // remove class star full
-      $(
-        `#products .product-card:nth-child(${indexChild}) .product-stars svg`
-      ).removeClass("star-full");
-
-      // menambahkan kembali star full sesuai jumlah bintang
-      for (let j = 0; j < starCount; j++) {
-        $(
-          `#products .product-card:nth-child(${indexChild}) .product-stars svg:nth-child(${
-            j + 1
-          })`
-        ).addClass("star-full");
-      }
+      makeStarFull(
+        `#products .product-card:nth-child(${indexChild}) .product-stars svg`,
+        productItems[i]["stars"]
+      );
     });
+
     // Modal item detail
     const itemDetailModal = document.querySelector("#item-detail-modal");
     const itemDetailButtons = document.querySelectorAll(".item-detail-button");
-    console.log(itemDetailButtons.length);
     const closeModal = document.querySelector("#modal-close-button");
 
-    // tampilkan modal
+    // tampilkan modal detail item
     itemDetailButtons.forEach((btn) => {
       btn.onclick = (e) => {
         e.preventDefault();
         $(itemDetailModal).attr("class", "modal show");
+        let indexItem = $(btn).parent().parent().data("id");
 
-        let productName = $(this)
-          .parent()
-          .parent()
-          .find(".product-content")
-          .html();
-        $(itemDetailModal).find(".product-content").html(productName);
+        // tampil gambar
+        $(itemDetailModal)
+          .find("img")
+          .attr("src", productItems[indexItem]["picture"]);
+
+        // tampil nama produk
+        $(itemDetailModal)
+          .find(".product-content h3")
+          .html(productItems[indexItem]["product_name"]);
+
+        // tampil deskripsi
+        $(itemDetailModal)
+          .find(".product-content p")
+          .text(productItems[indexItem]["description"]);
+
+        // tampilkan bintang
+        makeStarFull(
+          $(itemDetailModal).find(`.product-stars svg`),
+          productItems[indexItem]["stars"]
+        );
+
+        // tampilkan harga
+        showPriceItem(
+          $(itemDetailModal).find(`.product-price`),
+          productItems[indexItem]["price"],
+          productItems[indexItem]["offer"]
+        );
       };
     });
 
@@ -124,6 +137,29 @@ $(document).ready(() => {
     };
   });
 });
+
+// function tampil harga
+let showPriceItem = (elementName, itemPrice, itemOffer) => {
+  $(elementName).html(
+    itemOffer != "0"
+      ? `${rupiahFormat(itemOffer)} <span> ${rupiahFormat(itemPrice)}</span>`
+      : `${rupiahFormat(itemPrice)}`
+  );
+};
+
+// function star-full
+let makeStarFull = (elementName, starCount) => {
+  // remove class star full
+  $(elementName).removeClass("star-full");
+
+  // menambahkan kembali star full sesuai jumlah bintang
+  for (let j = 0; j < starCount; j++) {
+    $(elementName)
+      .parent()
+      .find(`svg:nth-child(${j + 1})`)
+      .addClass("star-full");
+  }
+};
 
 // format rupiah
 let rupiahFormat = (val) => {

@@ -2,48 +2,48 @@
   "products": [
     {
       "id": 1,
-      "product_name": "Kopi 1",
+      "product_name": "Arabica",
       "price": 30000,
-      "picture": "img/products/product.jpg",
+      "picture": "img/products/Arabica.png",
       "stars": 5,
       "offer": 0,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,voluptatum blanditiis hic aut culpa nisi illum quo ab iusto, nostrum vel veritatis asperiores incidunt adipisci, dolores similique sint. Dignissimos, beatae."
+      "description": "Dikenal sebagai salah satu jenis biji kopi terpopuler, dan berkualitas tinggi. Biji kopi Arabica ditanam di dataran tinggi dengan curah hujan stabil. Arabica memiliki rasa yang lebih halus, kompleks, dan sedikit pahit."
     },
     {
       "id": 2,
-      "product_name": "Kopi 2",
+      "product_name": "Robusta",
       "price": 33000,
-      "picture": "img/products/product.jpg",
+      "picture": "img/products/Robusta.png",
       "stars": 2,
       "offer": 30000,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,voluptatum blanditiis hic aut culpa nisi illum quo ab iusto, nostrum vel veritatis asperiores incidunt adipisci, dolores similique sint. Dignissimos, beatae."
+      "description": "Biji kopi Robusta terkenal karena cita rasanya yang kuat dan pekat karena jumlah kafein dari Robusta lebih banyak dibandingkan Arabica. Aroma dari Robusta juga cukup kuat. "
     },
     {
       "id": 3,
-      "product_name": "Kopi 3",
+      "product_name": "Liberica",
       "price": 28000,
-      "picture": "img/products/product.jpg",
+      "picture": "img/products/Liberica.png",
       "stars": 4,
       "offer": 24500,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,voluptatum blanditiis hic aut culpa nisi illum quo ab iusto, nostrum vel veritatis asperiores incidunt adipisci, dolores similique sint. Dignissimos, beatae."
+      "description": "Liberica merupakan salah satu jenis biji kopi yang paling sulit ditemukan. Ukurannya lebih besar daripada biji kopi lainnya dan bentuk Liberica juga tidak beraturan. Keunikan dari Liberica terletak pada aromanya yang tidak hanya smokey, tetapi juga seperti perpaduan buah dan bunga. Liberica menghadirkan rasa yang tidak biasa. Kamu bisa merasakan pedas, smokey, hingga pahit pada bagian akhirnya."
     },
     {
       "id": 4,
-      "product_name": "Kopi 4",
+      "product_name": "Excelsa",
       "price": 40000,
-      "picture": "img/products/product.jpg",
+      "picture": "img/products/Excelsa.png",
       "stars": 1,
       "offer": 37500,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,voluptatum blanditiis hic aut culpa nisi illum quo ab iusto, nostrum vel veritatis asperiores incidunt adipisci, dolores similique sint. Dignissimos, beatae."
+      "description": "Excelsa menghadirkan rasa asam ala buah yang berpadu dengan aroma asap. Jenis kopi ini lebih ringan dari segi aroma dan kafein."
     },
     {
       "id": 5,
-      "product_name": "Kopi 5",
+      "product_name": "Decaf",
       "price": 35000,
-      "picture": "img/products/product.jpg",
+      "picture": "img/products/Decaf.png",
       "stars": 3,
       "offer": 32500,
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,voluptatum blanditiis hic aut culpa nisi illum quo ab iusto, nostrum vel veritatis asperiores incidunt adipisci, dolores similique sint. Dignissimos, beatae."
+      "description": "Decaf adalah biji kopi dengan kadar kafein yang rendah. Proses Decaf dilakukan sebelum biji kopi dipanggang, yaitu dengan merendamnya di air atau uap hingga mengembang. Kemudian, biji kopi akan diekstraksi dengan air dan zat lainnya untuk mengurangi kadar kafein. Setelah itu, biji kopi dengan kafein rendah tersebut akan dikeringkan untuk mengembalikan kelembapan normalnya."
     }
   ]
 }
